@@ -76,7 +76,6 @@
     - Aprire un istanza del terminale nella cartella di progetto
     - Installare le dipendenze usando "npm install" nel terminale
     - Avviare il la webapp con "node app.js" oppure se si utilizza IntelliJ cliccare sul pulsante play "app.js"
-    - Aprire il browser su "http://localhost:3000"
 
     SottosistemIoT:
     - Eseguire un broker mosquitto su 127.0.0.1/localhost (se non già presente installare mosquitto sulla propria macchina e digitare "mosquitto" a terminale, se si esegue andare nella directory di installazione e riprovare)
@@ -84,5 +83,7 @@
     - Verificare la versione di Java (17)
     - Eseguire il file build.gradle
     - Eseguire il file "sottosistemaIoT" nel package upo.IoT
+
+    Ora è possibile aprire il browser all'indirizzo: "http://localhost:3000" e utilizzare il sistema
 
 
