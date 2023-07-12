@@ -86,4 +86,16 @@
 
     Ora è possibile aprire il browser all'indirizzo: "http://localhost:3000" e utilizzare il sistema
 
+## Utenti Pre-Registrati
+
+    Utente Agricoltore {
+        e-mail : 
+        password : 
+    } 
+
+    Utente Gestore Risorse Idriche {
+        e-mail : 
+        password : 
+    }
+
 
