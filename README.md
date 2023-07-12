@@ -1,5 +1,7 @@
 # AA22-23-Gruppo11
 
+## Sviluppatori
+
     MATTEO SCHIRINZI - 20035542
 
 ## Nome Progetto
