@@ -98,4 +98,6 @@
         password : 
     }
 
+## Consegna Prevista
 
+    Entro luglio 2023 - consegna finale di tutto il progetto entro il 19/07/23 per poter prendere parte alla discussione finale entro fine luglio
