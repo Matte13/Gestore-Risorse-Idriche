@@ -90,14 +90,19 @@
 
 ## Utenti Pre-Registrati
 
-    Utente Agricoltore {
-        e-mail : 
-        password : 
+    Utente Agricoltore 1 {
+        e-mail : mariorossi@gmail.com
+        password : mariorossi
+    } 
+
+    Utente Agricoltore 2 {
+        e-mail : paoloverdi@gmail.com
+        password : paoloverdi
     } 
 
     Utente Gestore Risorse Idriche {
-        e-mail : 
-        password : 
+        e-mail : admin@gmail.com
+        password : admin
     }
 
 ## Test Effettuati
