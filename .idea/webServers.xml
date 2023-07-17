@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="16436b6a-ddcf-439d-9758-a20067ecde17" name="https://gitlab.di.unipmn.it/pissir22-23/aa22-23-gruppo11.git" url="https://gitlab.di.unipmn.it/pissir22-23/aa22-23-gruppo11/-/tree/main/Gestore%20Risorse%20Idriche/WebApp">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

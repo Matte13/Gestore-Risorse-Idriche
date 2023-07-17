@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" src="/css/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Custom JS -->
+        <script defer src="js/form_valida.js"></script>
+        <script defer src="js/_sidebar_lista.js"></script>
+        <script defer src="js/_header.js"></script>
+        
+        <title>Gestione Azienda</title>
+    </head>
+
+    <body>
+        <header id="navTop"></header>
+
+        <nav id="sidebar_silogin"></nav>
+
+        <div class="container" style="margin-left:25%;">
+            <h6 id="errore_msg"></h6>
+            <main>
+                <form enctype="application/x-www-form-urlencoded" class="row g-3 needs-validation" action="http://localhost:3000/aziende/azienda/campi" method="post" novalidate>
+                    <div class="container-fluid">
+
+                        <div class="col-md-4">
+                            <h3>Crea un nuovo campo</h3>
+                        </div>
+
+                        <!-- Coltura -->
+                        <div class="col-md-4">
+                            <label class="form-label">Coltura*</label>
+                            <input type="text" id="coltura" name="coltura" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Devi fornire una coltura valida.
+                            </div>
+                        </div>
+
+                        <!-- Ettari -->
+                        <div class="col-md-4">
+                            <label  class="form-label">Ettari*</label>
+                            <input type="text" class="form-control" id="ettari" name="ettari" required>
+                            <div class="invalid-feedback">
+                                Devi fornire il numero di ettari del campo.
+                            </div>
+                        </div>
+
+                        <!-- Irrigazione -->
+                        <div class="col-md-4">
+                            <label for="tipoIrrigazione" class="form-label">Tipo Irrigazione*</label>
+                            <br>
+                            <select class="form-control" name="tipoIrrigazione" id="tipoIrrigazione" required>
+                                <option value="Tradizionale">Tradizionale</option>
+                                <option value="Goccia Goccia">Goccia Goccia</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Devi scegliere un tipo di irrigazione.
+                            </div>
+                        </div>
+
+                        <!-- Acqua Richiesta -->
+                        <div class="col-md-4">
+                            <label for="qtaAcqua" class="form-label">Quantità acqua richiesta*</label>
+                            <br>
+                            <select class="form-control" name="qtaAcqua" id="qtaAcqua" required>
+                                <option value="Poca">Poca</option>
+                                <option value="Media">Media</option>
+                                <option value="Tanta">Tanta</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Devi scegliere la quantità di acqua necessaria al campo.
+                            </div>
+                        </div>
+
+                        <!-- Acqua Assegnata -->
+                        <div class="col-md-4">
+                            <label  class="form-label">Acqua assegnata*</label>
+                            <input type="text" class="form-control" id="acquaAssegnata" name="acquaAssegnata" required>
+                            <div class="invalid-feedback">
+                                Assegna una quantità di acqua in litri al campo.
+                            </div>
+                        </div>
+
+                        <!-- Umidità Ideale -->
+                        <div class="col-md-4">
+                            <label  class="form-label">Umidità ideale*</label>
+                            <input type="text" class="form-control" id="umiditaIdeale" name="umiditaIdeale" required>
+                            <div class="invalid-feedback">
+                                Devi inserire l'umidità ideale per il campo.
+                            </div>
+                        </div>
+
+                        <!-- Crea -->
+                        <div class="col-12">
+                            <button class="btn btn-primary colore_btn" style="margin-top: 10px;" type="submit">Crea</button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+            th {
+                width:100px;
+            }
+        </style>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">        
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" src="css/style.css">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Custom JS -->
+        <script defer src="/js/_header.js"></script>
+        <script defer src="/js/_sidebar_lista.js"></script>
+        <script defer src="/js/storicoCampo/storicoCampo_view.js"></script>
+        <script defer src="/js/storicoCampo/storicoCampo_manager.js"></script>
+        <script defer src="/js/storicoCampo/storicoCampo_app.js"></script>
+        <script defer src="/js/storicoCampo/storicoCampo_main.js"></script>
+
+        <title>Gestione Azienda</title>
+    </head>
+    
+    <body>
+        <header id="navTop"></header>
+
+        <nav id="sidebar_silogin"></nav>
+
+        <div class="container" style="margin-left:25%; margin-top: 2%">
+            <main>
+                <div class="container-fluid">
+                    <h1>Storico consumo acqua per ogni campo</h1>
+                    <h4>Seleziona un campo</h4>
+                    <select id="listaCampi" class="form-select" aria-label="Default select example">
+                    </select>
+                </div>
+                <br>
+                <div class="container-fluid" id="listaConsumoCampo">
+
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

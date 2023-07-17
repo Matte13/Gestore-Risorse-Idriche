@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" src="/css/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Custom JS -->
+        <script defer src="js/_header.js"></script>
+        <script defer src="js/_sidebar_dettagli.js"></script>
+        <script defer src="js/form_valida.js"></script>
+        
+        <title>Gestione Azienda</title>
+    </head>
+
+    <body>
+        <header id="navTop"></header>
+
+        <nav id="sidebar_silogin"></nav>
+
+        <div class="container" style="margin-left:25%;">
+            <main>   
+
+                <!-- Valore -->
+                <div class="col-md-4">
+                    <label  class="form-label">Valore attivazione*</label>
+                    <input type="number" min=0 max=100 id="condizione" name="condizione" class="form-control" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">
+                        Devi fornire un valore valido.
+                    </div>
+                </div>
+                
+                <!-- Descrizione -->
+                <div class="col-md-4">
+                    <label  class="form-label">Descrizione*</label>
+                    <input type="text" id="descrizione" name="descrizione" class="form-control" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">
+                        Devi fornire una stringa valida.
+                    </div>
+                </div>
+
+                <!-- Giorno -->
+                <div class="col-md-4">
+                    <label class="form-label">Giorno di attivazione*</label>
+                    <select class="form-control" id="giorno" name="giorno" required>
+                        <option value="1">Lunedì</option>
+                        <option value="2">Martedì</option>
+                        <option value="3">Mercoledì</option>
+                        <option value="4">Giovedì</option>
+                        <option value="5">Venerdì</option>
+                        <option value="6">Sabato</option>
+                        <option value="7">Domenica</option>       
+                    </select>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">
+                        Devi fornire un giorno.
+                    </div>
+                </div>
+    
+                <!-- Ora attivazione -->
+                <div class="col-md-4">
+                    <label  class="form-label">Ora di attivazione*</label>
+                    <input type="time" id="ora_inizio" name="ora_inizio" class="form-control" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">
+                        Devi fornire un'ora valida.
+                    </div>
+                </div>
+            
+                <!-- Ora spegnimento -->
+                <div class="col-md-4">
+                    <label  class="form-label">Ora di spegnimento*</label>
+                    <input type="time" id="ora_fine" name="ora_fine" class="form-control" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback"></div>
+                </div>
+
+                <!-- Errore -->
+                <br>
+                <div id="errore_div" class="alert alert-danger col-md-4" role="alert" style="display: none">
+                    <h6 id="errore_msg"></h6>
+                </div>
+    
+                <!-- Crea piano -->
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary colore_btn" style="margin-top: 10px;" id="insert">Crea Piano</button>
+                </div>
+
+                <script>
+                    const element = document.getElementById("insert");
+                    element.addEventListener("click",InsertPiano);
+                        
+                    async function InsertPiano() {
+
+                        let currentUrl = new URLSearchParams(window.location.search);
+                        let attuatore = currentUrl.get('attuatore'); 
+                        let campo = currentUrl.get('campo');
+ 
+                        const condizione = document.getElementById("condizione").value;
+                        const descrizione = document.getElementById("descrizione").value;
+                        const giorno = document.getElementById("giorno").value;
+                        const ora_inizio = document.getElementById("ora_inizio").value;
+                        const ora_fine = document.getElementById("ora_fine").value;
+
+                        if(condizione === "" || descrizione === "" || giorno === "" || ora_inizio === "" || ora_fine === "")
+                        {
+                            document.getElementById("errore_div").innerHTML = "Riempi tutti i campi";
+                            document.getElementById("errore_div").style.display = "block";
+                            setTimeout(function() {
+                                document.getElementById("errore_div").style.display = "none";
+                            }, 3500);
+                        }
+                        else if(parseInt(condizione) < 1 || parseInt(condizione) > 100)
+                        {
+                            document.getElementById("errore_div").innerHTML = "Il valore della condizione deve essere compreso tra 1 e 100";
+                            document.getElementById("errore_div").style.display = "block";
+                            setTimeout(function() {
+                                document.getElementById("errore_div").style.display = "none";
+                            }, 3500);
+                        }
+                        else
+                        {
+                            const piano = {
+                                giorno : giorno,
+                                condizione : condizione,
+                                descrizione : descrizione,
+                                ora_inizio : ora_inizio,
+                                ora_fine : ora_fine,
+                                idAttuatore :attuatore
+                            };
+
+                            let resp = await fetch(`/idAzienda`);
+                            const Azienda = await resp.json();
+
+                            let response  = await fetch(`/aziende/${Azienda.idAzienda}/campi/${campo}/attuatori/${attuatore}/piani`, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body:JSON.stringify(piano)
+                            });
+                            if(response.status === 200)
+                            {
+                                window.location="http://localhost:3000/dettagliCampo.html?campo="+campo;
+                            }
+                        }
+
+                    }
+                </script>
+            </main>
+        </div>
+    </body>
+</html>
