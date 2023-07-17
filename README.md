@@ -100,6 +100,30 @@
         password : 
     }
 
+## Test Effettuati
+    LOGIN
+        - inserimento non corretto di mail e/o password 
+        - login di un utente non registrato
+    REGISTRAZIONE UTENTE
+        - registrazione con uno o più campi vuoti
+        - controllo che la mail inserita non sia già registrata con un’altro utente
+        - controllo che le due password coincidano
+    REGISTRAZIONE AZIENDA
+        - controllo che venga inserito un nome valido (es.non vuoto)
+        - controllo che l’azienda non sia già presente nel db
+    UTENTE GA
+        - cancellazione di un campo
+        - modifica di un campo: controllo che tutti i campi siano stati riempiti e che l’acqua assegnata non superi la disponibilità dell’acqua assegnata all’azienda (e agli altri campi dell’azienda)
+	    - attuatori: crea piano, attiva/disattiva, cambia modalità, elimina piano
+	    - inserimento sensore/attuatore campo: controllo che siano massimo uno per tipo
+	    - gestione acqua: controllo che venga immesso un valore valido (controllare che sia un valore numerico), che venga inserita massimo una richiesta al giorno e che la richiesta sia superiore di quella già assegnata
+    UTENTE GSI
+	    - modifica acqua totale: controllo inserimento di un valore minore uguale dell'acqua attualmente assegnata
+    GENERALE
+        - controllo che il sottosistemaIoT rilevi i sensori e gli attuatori aggiunti
+        - controllo che il sottosistemaIoT produta delle misurazioni dei sensori veritiere e le inserisce correttamente nel db
+        - controllo che la WebApp riceva in tempo reale e mostri i cambiamenti di stato degli attuatori e i valori di data e ora
+
 ## Consegna Prevista
 
     Entro luglio 2023 - consegna finale di tutto il progetto entro il 19/07/23 per poter prendere parte alla discussione finale entro fine luglio
