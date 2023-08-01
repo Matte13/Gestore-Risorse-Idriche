@@ -80,7 +80,7 @@
     - Avviare il la webapp con "node app.js" oppure se si utilizza IntelliJ cliccare sul pulsante play "app.js"
 
     SottosistemIoT:
-    - Eseguire un broker mosquitto su 127.0.0.1/localhost (se non già presente installare mosquitto sulla propria macchina e digitare "mosquitto" a terminale, se si esegue andare nella directory di installazione e riprovare)
+    - Eseguire un broker mosquitto su 127.0.0.1/localhost (se non già presente installare mosquitto sulla propria macchina e digitare "mosquitto" a terminale, se non si esegue andare nella directory di installazione e riprovare)
     - Aprire il progetto con IntelliJ o altro IDE
     - Verificare la versione di Java (17)
     - Eseguire il file build.gradle
