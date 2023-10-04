@@ -1,4 +1,4 @@
-# AA22-23-Gruppo11
+# Gestore Risorse Idriche
 
 ## Sviluppatori
 
@@ -129,6 +129,4 @@
         - controllo che il sottosistemaIoT produta delle misurazioni dei sensori veritiere e le inserisce correttamente nel db
         - controllo che la WebApp riceva in tempo reale e mostri i cambiamenti di stato degli attuatori e i valori di data e ora
 
-## Consegna Prevista
 
-    Consegnato il 17/07/2023
