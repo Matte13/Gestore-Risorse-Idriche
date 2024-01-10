@@ -10,7 +10,7 @@
 
 ## Descrizione
 
-    Il progetto ha lo scopo di gestire il dispiegamento di risorse idriche in diverse aziende agricole collegate ad un fornitore di    risorse idriche che ne gestisce l'assegnazione di acqua.
+    Il progetto ha lo scopo di gestire il dispiegamento di risorse idriche in diverse aziende agricole collegate ad un fornitore di risorse idriche che ne gestisce l'assegnazione di acqua.
 
     Il sistema è strutturato da una WebApp che comunica via MQTT con il sottosistema IoT tramite un broker mosquitto installato localmente; sono presenti due macro componenti: AppWeb e sottosistemaIoT (Java) ed entrambi hanno ruolo di publisher e subscriber.
 
